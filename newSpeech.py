@@ -1,13 +1,16 @@
-import openai
+import os
+from openai import OpenAI  # Import the OpenAI class
 import speech_recognition as sr
 import pyttsx3
-import os
+from dotenv import load_dotenv
 
-# Set up OpenAI API key
-client = openai.OpenAI(api_key="")
+# Load environment variables from .env file
+load_dotenv()
 
-# Initialize text-to-speech enginegit reset --soft HEAD~1
+# Initialize the OpenAI client
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+# Initialize text-to-speech engine
 engine = pyttsx3.init()
 
 # Function to convert text to speech
@@ -54,9 +57,11 @@ def symptom_analysis(user_input):
 def ask_chatbot(query):
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",  # Use "gpt-3.5-turbo" if you prefer
-            messages=[{"role": "system", "content": "You are a virtual health assistant."},
-                      {"role": "user", "content": query}]
+            model="gpt-3.5-turbo",  # Use "gpt-4" if available
+            messages=[
+                {"role": "system", "content": "You are a virtual health assistant. Provide helpful and professional advice."},
+                {"role": "user", "content": query}
+            ]
         )
         return response.choices[0].message.content
     except Exception as e:
@@ -66,9 +71,13 @@ def ask_chatbot(query):
 def main():
     user_input = recognize_speech()
     if user_input:
+        # Get response from OpenAI Chatbot
         chatbot_response = ask_chatbot(user_input)
+        
+        # Analyze symptoms (optional)
         symptom_advice = symptom_analysis(user_input)
         
+        # Combine responses
         final_response = f"{chatbot_response}\n\n{symptom_advice}"
         print("Chatbot:", final_response)
         speak(final_response)
