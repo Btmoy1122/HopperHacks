@@ -10,12 +10,12 @@
   }
   
   h1 {
-    color: #333; /* Dark gray text */
+    color: black; /* Dark gray text */
     margin-bottom: 20px;
   }
   
   .calendar-container {
-    background-color: white;
+    background-color: gray;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
@@ -31,7 +31,7 @@
   }
   
   .react-calendar__tile--active {
-    background-color: purple; /* Purple background for selected date */
+    background-color: #007FFF; /* Purple background for selected date */
     color: white;
   }
   
@@ -63,7 +63,7 @@
   button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: purple; /* Purple background */
+    background-color: #007FFF; /* Purple background */
     color: black; /* Default text color for buttons */
     border: none;
     border-radius: 5px;

@@ -18,10 +18,10 @@ body {
  /* Header Styles */
  .header {
   /*background: linear-gradient(135deg, #6a11cb, #2575fc);*/
-  background-image: url('https://thumbs.dreamstime.com/b/studio-shot-cute-robot-dressed-as-pirate-concept-artificial-intelligence-fantasy-costume-created-generative-ai-277469605.jpg');
+  background-image: url('https://i.etsystatic.com/23006761/r/il/604198/2776446466/il_570xN.2776446466_1amv.jpg');
   background-size: cover;
   background-position: center;
-  color: white;
+  color: black;
   padding: 60px 20px;
   text-align: center;
   animation: fadeIn 2s ease-in-out;
@@ -94,7 +94,7 @@ body {
  
  
  .navbar ul li a:hover {
-  background-color: #6a11cb;
+  background-color: #D2B48C;
   color: white;
   transform: translateY(-3px);
  }
@@ -117,7 +117,7 @@ body {
  
  .about-section h2 {
   font-size: 2.5rem;
-  color: #6a11cb;
+  color: #D2B48C;
   margin-bottom: 20px;
  }
  
@@ -131,7 +131,7 @@ body {
  
  .services-section h2 {
   font-size: 2.5rem;
-  color: #6a11cb;
+  color: #D2B48C;
   margin-bottom: 20px;
  }
  
@@ -160,14 +160,14 @@ body {
  
  .service-card h3 {
   font-size: 1.5rem;
-  color: #6a11cb;
+  color: #D2B48C;
   margin-bottom: 10px;
  }
  
  
  .service-card p {
   font-size: 1rem;
-  color: #555;
+  color: black;
   line-height: 1.5;
  }
  
