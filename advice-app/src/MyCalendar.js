@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import "./App.css"; // Make sure to import the CSS file
+import "./App.css"; // Ensure the CSS path is correct
 
 function MyCalendar() {
   const [date, setDate] = useState(new Date());
@@ -89,7 +89,7 @@ function MyCalendar() {
         <Calendar
           onChange={setDate}
           value={date}
-          tileDisabled={({ date }) => isWeekday(date)} // Disable past dates and weekends
+          tileDisabled={({ date }) => (date ? isWeekday(date) : false)} // Handle null safely
         />
         <p>
           You picked: <strong>{date.toDateString()}</strong>
