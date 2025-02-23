@@ -57,7 +57,7 @@ def symptom_analysis(user_input):
 def ask_chatbot(query):
     try:
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",  # Use "gpt-4" if available
+            model="gpt-3.5-turbo",  # Use "gpt-4" as another option
             messages=[
                 {"role": "system", "content": "You are a virtual health assistant. Provide helpful and professional advice."},
                 {"role": "user", "content": query}
