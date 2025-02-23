@@ -8,7 +8,7 @@ function CalendarPage() {
         <h1>Welcome!</h1>
         <MyCalendar />
       </div>
-      
+     
     );
   }
 

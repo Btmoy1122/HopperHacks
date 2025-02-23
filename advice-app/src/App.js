@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import CalendarPage from './CalendarPage';
-import Chatbot from './Chatbot'; // Import the Chatbot page
+import Chatbot from './Chatbot';
+import Journal from './Journal'; // Import Journal Component
 import { images } from './images';
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/calendar">Calendar</Link></li>
-            <li><Link to="/chatbot">Chatbot</Link></li> 
+            <li><Link to="/chatbot">Chatbot</Link></li>
+            <li><Link to="/journal">Journal</Link></li> {/* Added Journal Link */}
             <li><Link to="/contact">Contact</Link></li>
-            
           </ul>
         </nav>
 
@@ -28,7 +29,8 @@ function App() {
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/chatbot" element={<Chatbot />} /> {/* New Chatbot Route */}
+          <Route path="/chatbot" element={<Chatbot />} />
+          <Route path="/journal" element={<Journal />} /> {/* Added Journal Route */}
         </Routes>
 
         <footer className="footer">
@@ -68,10 +70,10 @@ function Home() {
           <div className="service-card">
             <h3>ChatBot</h3>
             <p>Click on Josh the pirate doctor to talk to a virtual assistant!!</p>
-            <Link to="/chatbot">  {/* Link to Chatbot Page */}
+            <Link to="/chatbot">
               <button style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}>
                 <img
-                  src = {images.chatbot}
+                  src={images.chatbot}
                   alt="Chatbot Image"
                   style={{ width: '150px', height: 'auto' }}
                 />
@@ -80,7 +82,16 @@ function Home() {
           </div>
           <div className="service-card">
             <h3>Journal</h3>
-            <p>Click on David to jounral about your thouhgts!!</p>
+            <p>Click on David to journal about your thoughts!!</p>
+            <Link to="/journal"> {/* Added Journal Link */}
+              <button style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}>
+                <img
+                  src={images.journal} // Ensure you have an image for this
+                  alt="Journal Image"
+                  style={{ width: '150px', height: 'auto' }}
+                />
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -91,7 +102,6 @@ function Home() {
 function Services() {
   return <h2>Services Page</h2>;
 }
-
 
 function Contact() {
   return (
@@ -115,10 +125,9 @@ function Contact() {
           </div>
         </div>
 
-        {/* Contact Box 2 */}
         <div className="contact-box">
           <img
-           src={images.person2}
+            src={images.person2}
             alt="Person 2"
             className="contact-image"
           />
@@ -128,7 +137,6 @@ function Contact() {
           </div>
         </div>
 
-        {/* Contact Box 3 */}
         <div className="contact-box">
           <img
             src={images.person3}
@@ -145,4 +153,31 @@ function Contact() {
     </div>
   );
 }
+
+
+
+
+
+/*function Contact() {
+  return (
+    <div className="contact-page">
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions, feedback, or need assistance, feel free to reach out to us. We're
+        here to help!
+      </p>
+      <div className="contact-info">
+        <h3>Our Contact Information</h3>
+        <ul>
+          <li><strong>Brandon Moy's Email:</strong> brandon.moy@stonybrook.edu</li>
+
+          <li><strong>Harry Martin's Email:</strong> harrsion.martin@stonybrook.edu</li>
+          <li><strong>Charles Cheung's Email:</strong> charles.cheung.2@stonybrook.edu</li>
+          <li><strong>Address:</strong> 400 Circle Rd, Stony Brook, NY 11794</li>
+        </ul>
+      </div>
+    </div>
+  );
+}*/
+
 export default App;

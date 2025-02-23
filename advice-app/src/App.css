@@ -443,3 +443,85 @@ button:hover {
   color: #555;
   margin: 5px 0;
 }
+/* Journal Page Styles */
+.journal-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.journal-container h1 {
+  font-size: 2.5rem;
+  color: #D2B48C;
+  margin-bottom: 20px;
+}
+
+.journal-container textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.journal-container button {
+  background-color: #D2B48C;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+.journal-container button:hover {
+  background-color: #b2906b;
+}
+
+.journal-entries {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.journal-entry {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.journal-entry strong {
+  color: #8b0000;
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #D2B48C;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #b2906b;
+}
+
+/* Recording button */
+button[disabled] {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+}
