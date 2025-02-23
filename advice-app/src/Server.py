@@ -10,8 +10,7 @@ load_dotenv()
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)  # Allow requests from frontend
-
+CORS(app, resources={r"/chatbot": {"origins": "https://hopperhacks-2.onrender.com"}})
 # Initialize OpenAI API client
 client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
