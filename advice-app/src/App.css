@@ -246,7 +246,7 @@ body {
 
 .chat-container h1 {
   font-size: 2.5rem;
-  color: #6a11cb;
+  color: back;
   margin-bottom: 10px;
 }
 
@@ -270,7 +270,7 @@ textarea {
 }
 
 button {
-  background-color: #6a11cb;
+  background-color: #D2B48C;
   color: white;
   font-size: 18px;
   border: none;
@@ -281,7 +281,7 @@ button {
 }
 
 button:hover {
-  background-color: #2575fc;
+  background-color: #D2B48C;
 }
 
 .chat-response {
@@ -295,17 +295,17 @@ button:hover {
 .back-home {
   margin-top: 15px;
   font-size: 16px;
-  color: #6a11cb;
+  color: black;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
 .back-home:hover {
-  color: #2575fc;
+  color: #D2B48C;
   text-decoration: underline;
 }
 button {
-  background-color: #6a11cb;
+  background-color: #D2B48C;
   color: white;
   font-size: 18px;
   border: none;
@@ -317,7 +317,7 @@ button {
 }
 
 button:hover {
-  background-color: #2575fc;
+  background-color: #D2B48C;
 }
 
 .chat-box {
@@ -363,7 +363,7 @@ button + button {
 }
 
 button {
-  background-color: #6a11cb;
+  background-color: #D2B48C;
   color: white;
   font-size: 18px;
   border: none;
@@ -374,5 +374,5 @@ button {
 }
 
 button:hover {
-  background-color: #2575fc;
+  background-color: #D2B48C;
 }

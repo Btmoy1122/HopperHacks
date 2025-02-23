@@ -107,7 +107,6 @@ function MyCalendar() {
         </div>
         <button onClick={handleReservation}>Reserve Appointment</button>
       </div>
-
       <div className="reservations">
         <h3>Your Reservations</h3>
         {reservations.length === 0 ? (
