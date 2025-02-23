@@ -10,7 +10,7 @@
   }
   
   h1 {
-    color: black; /* Dark gray text */
+    color: rgb(2, 2, 2); /* Dark gray text */
     margin-bottom: 20px;
   }
   
@@ -32,17 +32,17 @@
   
   .react-calendar__tile--active {
     background-color: #007FFF; /* Purple background for selected date */
-    color: white;
+    color: rgb(0, 0, 0); 
   }
   
   /* Change hover color for selected dates to a lighter purple */
   .react-calendar__tile--active:hover {
-    background-color: #b19cd9; /* Lighter purple */
+    background-color: #b49fdc; /* Lighter purple */
   }
   
   .react-calendar__tile--now {
     background-color: #ffc107; /* Yellow background for today's date */
-    color: black;
+    color: rgb(0, 0, 0);
   }
   
   .react-calendar__tile:disabled {
@@ -73,7 +73,7 @@
   
   /* Change font color of the "Reserve Appointment" button to white */
   button.reserve-button {
-    color: white;
+    color: black;
   }
   
   button:hover {
