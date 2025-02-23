@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './App.css'; // Ensure this is imported to apply styles
+import './App.css'; // Ensure styles are included
 
 const Journal = () => {
     const [entry, setEntry] = useState('');
     const [entries, setEntries] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [isRecording, setIsRecording] = useState(false);
+    
+    let recognition;
+
+    useEffect(() => {
+        fetchEntries();
+    }, []);
 
     const fetchEntries = async () => {
         setLoading(true);
@@ -52,24 +59,58 @@ const Journal = () => {
         }
     };
 
-    useEffect(() => {
-        fetchEntries();
-    }, []);
+    // Start Voice Recognition
+    const startRecording = () => {
+        if (!('webkitSpeechRecognition' in window)) {
+            alert('Speech recognition is not supported in this browser. Try Chrome or Edge.');
+            return;
+        }
+
+        recognition = new window.webkitSpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'en-US';
+
+        recognition.onstart = () => {
+            setIsRecording(true);
+        };
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            setEntry(prevEntry => prevEntry + ' ' + transcript);
+        };
+
+        recognition.onerror = (event) => {
+            console.error("Speech recognition error:", event.error);
+            setError('Speech recognition error. Please try again.');
+        };
+
+        recognition.onend = () => {
+            setIsRecording(false);
+        };
+
+        recognition.start();
+    };
 
     return (
-        <div className="journal-container"> {/* Added styling wrapper */}
+        <div className="journal-container">
             <h1>Journal</h1>
             <textarea
-                placeholder="Write your journal entry..."
+                placeholder="Write or dictate your journal entry..."
                 value={entry}
                 onChange={(e) => setEntry(e.target.value)}
             />
-            <button onClick={logEntry} disabled={loading}>
-                {loading ? 'Logging...' : 'Log Entry'}
-            </button>
-            <button onClick={clearEntries} disabled={loading} style={{ marginTop: '10px', backgroundColor: '#ff4444' }}>
-                Clear Journal
-            </button>
+            <div className="button-container">
+                <button onClick={logEntry} disabled={loading}>
+                    {loading ? 'Logging...' : 'Log Entry'}
+                </button>
+                <button onClick={clearEntries} disabled={loading} style={{ backgroundColor: '#ff4444' }}>
+                    Clear Journal
+                </button>
+                <button onClick={startRecording} disabled={isRecording} style={{ backgroundColor: isRecording ? '#ccc' : '#007BFF' }}>
+                    {isRecording ? 'Listening...' : 'Start Recording'}
+                </button>
+            </div>
             {error && <p className="error-message">{error}</p>}
             <div className="journal-entries">
                 {entries.map((entry, index) => (

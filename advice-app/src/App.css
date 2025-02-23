@@ -499,3 +499,29 @@ button:hover {
 .journal-entry strong {
   color: #8b0000;
 }
+.button-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #D2B48C;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #b2906b;
+}
+
+/* Recording button */
+button[disabled] {
+  background-color: #ccc !important;
+  cursor: not-allowed;
+}
