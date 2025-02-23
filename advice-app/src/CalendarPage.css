@@ -97,3 +97,29 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
+  .react-calendar {
+    color: black; /* Set the default text color to black */
+}
+
+.react-calendar__tile {
+    color: black; /* Ensure individual tiles have black text */
+}
+
+.react-calendar__navigation button {
+    color: black; /* Ensure navigation buttons have black text */
+}
+
+.react-calendar__tile--active {
+    background-color: #007FFF; /* Purple background for selected date */
+    color: black; /* Ensure text is black on active tiles */
+}
+
+.react-calendar__tile--now {
+    background-color: #ffc107; /* Yellow background for today's date */
+    color: black; /* Ensure text is black on today's date */
+}
+
+.react-calendar__tile:disabled {
+    background-color: #e9ecef; /* Light gray for disabled dates */
+    color: #6c757d; /* Gray text for disabled dates */
+}
