@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Journal.css';
+import './App.css'; // Ensure this is imported to apply styles
 
 const Journal = () => {
     const [entry, setEntry] = useState('');
@@ -51,13 +51,13 @@ const Journal = () => {
             setError(`Failed to clear journal entries. Error: ${error.response?.status}`);
         }
     };
-    
+
     useEffect(() => {
         fetchEntries();
     }, []);
 
     return (
-        <div className="container">
+        <div className="journal-container"> {/* Added styling wrapper */}
             <h1>Journal</h1>
             <textarea
                 placeholder="Write your journal entry..."
@@ -71,13 +71,13 @@ const Journal = () => {
                 Clear Journal
             </button>
             {error && <p className="error-message">{error}</p>}
-            <ul>
+            <div className="journal-entries">
                 {entries.map((entry, index) => (
-                    <li key={index}>
+                    <div key={index} className="journal-entry">
                         <strong>{entry.date}:</strong> {entry.entry}
-                    </li>
+                    </div>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
