@@ -1,6 +1,6 @@
 import React from "react";
 import MyCalendar from "./MyCalendar"; // ✅ Updated import
-import "./CalendarPage.css";
+import './CalendarPage.css'; 
 
 function CalendarPage() {
     return (
