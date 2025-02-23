@@ -50,10 +50,10 @@ function Home() {
   return (
     <main className="main-content">
       <section className="about-section">
-        <h2>About Me</h2>
+        <h2>About Us</h2>
         <p>
-          I am a passionate developer who loves building amazing websites. With a focus on clean
-          design and user experience, I bring ideas to life.
+          We are three students from Stony Brook University who love to create fun programming projects. 
+          We love WICS! Ahoy!!
         </p>
       </section>
       <section className="services-section">
