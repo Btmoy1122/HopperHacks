@@ -4,6 +4,8 @@ import './App.css';
 import CalendarPage from './CalendarPage';
 import Chatbot from './Chatbot';
 import Journal from './Journal';
+import Meditation from './Meditation'; 
+
 import { images } from './images';
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
             <li><Link to="/chatbot">Chatbot</Link></li>
             <li><Link to="/journal">Journal</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/meditation">Meditation</Link></li> {/* Add this in Navbar */}
+
           </ul>
         </nav>
 
@@ -31,6 +35,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/journal" element={<Journal />} />
+          <Route path="/meditation" element={<Meditation />} /> 
         </Routes>
 
         <footer className="footer">
