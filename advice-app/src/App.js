@@ -154,4 +154,30 @@ function Contact() {
   );
 }
 
+
+
+
+
+/*function Contact() {
+  return (
+    <div className="contact-page">
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions, feedback, or need assistance, feel free to reach out to us. We're
+        here to help!
+      </p>
+      <div className="contact-info">
+        <h3>Our Contact Information</h3>
+        <ul>
+          <li><strong>Brandon Moy's Email:</strong> brandon.moy@stonybrook.edu</li>
+
+          <li><strong>Harry Martin's Email:</strong> harrsion.martin@stonybrook.edu</li>
+          <li><strong>Charles Cheung's Email:</strong> charles.cheung.2@stonybrook.edu</li>
+          <li><strong>Address:</strong> 400 Circle Rd, Stony Brook, NY 11794</li>
+        </ul>
+      </div>
+    </div>
+  );
+}*/
+
 export default App;
