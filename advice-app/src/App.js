@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import CalendarPage from './CalendarPage';
 import Chatbot from './Chatbot';
-import Journal from './Journal'; // Import Journal Component
+import Journal from './Journal';
 import { images } from './images';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/calendar">Calendar</Link></li>
             <li><Link to="/chatbot">Chatbot</Link></li>
-            <li><Link to="/journal">Journal</Link></li> {/* Added Journal Link */}
+            <li><Link to="/journal">Journal</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -30,7 +30,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/chatbot" element={<Chatbot />} />
-          <Route path="/journal" element={<Journal />} /> {/* Added Journal Route */}
+          <Route path="/journal" element={<Journal />} />
         </Routes>
 
         <footer className="footer">
@@ -83,10 +83,10 @@ function Home() {
           <div className="service-card">
             <h3>Journal</h3>
             <p>Click on David to journal about your thoughts!!</p>
-            <Link to="/journal"> {/* Added Journal Link */}
+            <Link to="/journal">
               <button style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}>
                 <img
-                  src={images.journal} // Ensure you have an image for this
+                  src={images.journal}
                   alt="Journal Image"
                   style={{ width: '150px', height: 'auto' }}
                 />
