@@ -10,7 +10,6 @@ function App() {
       <div className="app">
         <header className="header">
           <h1>Health Bot AI</h1>
-          <p>How may I help you?</p>
         </header>
 
         <nav className="navbar">
