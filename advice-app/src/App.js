@@ -1,10 +1,19 @@
+<<<<<<< HEAD
+import React from "react";
+import MyCalendar from "./Calendar";
+import "./App.css";
+=======
 import React from 'react';
 import './App.css';
-//import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-//import StressTracker from './StressTracker';
+
 
 function App() {
   return (
+<<<<<<< HEAD
+    <div className="App">
+      <h1>Welcome to the Advice App!</h1>
+      <MyCalendar />
+=======
     <div className="app">
       {}
       <header className="header">
@@ -82,6 +91,7 @@ function App() {
       <footer className="footer">
         <p>&copy; 2023 My Awesome Website. All rights reserved.</p>
       </footer>
+>>>>>>> 77c60671aac2dcc74bb9eeb9a7bdef8a9dfcd52d
     </div>
   );
 }

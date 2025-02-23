@@ -15,78 +15,34 @@ body {
 
 /* Header Styles */
 .header {
-  /*background: linear-gradient(135deg, #6a11cb, #2575fc);*/
-  background-image: url('https://thumbs.dreamstime.com/b/studio-shot-cute-robot-dressed-as-pirate-concept-artificial-intelligence-fantasy-costume-created-generative-ai-277469605.jpg');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
   color: white;
   padding: 60px 20px;
   text-align: center;
-  animation: fadeIn 2s ease-in-out;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 3rem;
-  font-weight: bold;
-  animation: slideIn 1.5s ease-in-out;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.header p {
-  margin: 10px 0 0;
-  font-size: 1.2rem;
-  animation: slideIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
 
-@keyframes slideIn {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Navbar Styles */
-.navbar {
-  background-color: #333;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.navbar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  padding: 10px 15px;
-  transition: all 0.3s ease;
-  border-radius: 5px;
-}
-
-.navbar ul li a:hover {
-  background-color: #6a11cb;
-  color: white;
-  transform: translateY(-3px);
+.App-link {
+  color: #61dafb;
 }
 
 /* Main Content Styles */
@@ -141,7 +97,7 @@ body {
 
 .service-card h3 {
   font-size: 1.5rem;
-  color: #6a11cb;
+  color: #2575fc;
   margin-bottom: 10px;
 }
 
@@ -187,20 +143,4 @@ body {
   .services-grid {
     grid-template-columns: 1fr;
   }
-}
-.navbar ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 20px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #8b0000;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  color: #ff6f61;
 }
