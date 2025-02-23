@@ -1,36 +1,236 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f9;
+  color: #333;
+ }
+ 
+ 
+ .app {
   display: flex;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: column;
+  min-height: 100vh;
+ }
+ 
+ 
+ /* Header Styles */
+ .header {
+  /*background: linear-gradient(135deg, #6a11cb, #2575fc);*/
+  background-image: url('https://thumbs.dreamstime.com/b/studio-shot-cute-robot-dressed-as-pirate-concept-artificial-intelligence-fantasy-costume-created-generative-ai-277469605.jpg');
+  background-size: cover;
+  background-position: center;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+ }
+ 
+ 
+ .header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+  animation: slideIn 1.5s ease-in-out;
+ }
+ 
+ 
+ .header p {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+  animation: slideIn 2s ease-in-out;
+ }
+ 
+ 
+ @keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
-}
+ }
+ 
+ 
+ @keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+ }
+ 
+ 
+ /* Navbar Styles */
+ .navbar {
+  background-color: #333;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ 
+ .navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ }
+ 
+ 
+ .navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+ }
+ 
+ 
+ .navbar ul li a:hover {
+  background-color: #6a11cb;
+  color: white;
+  transform: translateY(-3px);
+ }
+ 
+ 
+ /* Main Content Styles */
+ .main-content {
+  flex: 1;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+ }
+ 
+ 
+ .about-section {
+  margin-bottom: 40px;
+ }
+ 
+ 
+ .about-section h2 {
+  font-size: 2.5rem;
+  color: #6a11cb;
+  margin-bottom: 20px;
+ }
+ 
+ 
+ .about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+ }
+ 
+ 
+ .services-section h2 {
+  font-size: 2.5rem;
+  color: #6a11cb;
+  margin-bottom: 20px;
+ }
+ 
+ 
+ .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+ }
+ 
+ 
+ .service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ 
+ .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+ }
+ 
+ 
+ .service-card h3 {
+  font-size: 1.5rem;
+  color: #6a11cb;
+  margin-bottom: 10px;
+ }
+ 
+ 
+ .service-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+ }
+ 
+ 
+ /* Footer Styles */
+ .footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+ }
+ 
+ 
+ .footer p {
+  margin: 0;
+  font-size: 1rem;
+ }
+ 
+ 
+ /* Responsive Design */
+ @media (max-width: 768px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+ 
+ 
+  .header p {
+    font-size: 1rem;
+  }
+ 
+ 
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+ 
+ 
+  .navbar ul li a {
+    padding: 8px;
+  }
+ 
+ 
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+ }
+ .navbar ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+ }
+ 
+ 
+ .navbar a {
+  text-decoration: none;
+  color: #8b0000;
+  font-weight: bold;
+ }
+ 
+ 
+ .navbar a:hover {
+  color: #ff6f61;
+ }
+ 
