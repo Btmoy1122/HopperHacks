@@ -74,8 +74,17 @@ function Home() {
           </div>
 
           <div className="service-card">
-            <h3>SEO Optimization</h3>
-            <p>Improving your website's visibility on search engines.</p>
+            <h3>Journal</h3>
+            <p>Write down your thoughts to relax!</p>
+            <Link to="/journal">
+            <button style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}>
+              <img
+                src="https://files.oaiusercontent.com/file-RwrwzxMQ9pp2SyZgGTDZ87?se=2025-02-23T03%3A05%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dacbc81bc-e158-4945-8755-c58724776da6.webp&sig=kr4e7ci9jBCO9s8tq9KLMOPNOZGdUuhWf2RbX6%2BXGTM%3D"
+                alt="Button Image"
+                style={{ width: '150px', height: 'auto' }}
+              />
+              </button>
+            </Link>
           </div>
         </div>
       </section>

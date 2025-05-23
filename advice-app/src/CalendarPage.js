@@ -1,6 +1,10 @@
 import React from "react";
 import "./App.css";
-import Calendar from './Calendar'; // Import the Calendar component
+
+// Define the Calendar component directly in this file
+const Calendar = () => {
+  return <div>This is the calendar component.</div>;
+};
 
 function CalendarPage() {
   return (
