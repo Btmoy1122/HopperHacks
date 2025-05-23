@@ -1,16 +1,14 @@
 import React from "react";
-import Calendar from "./CalendarPage";
 import "./App.css";
+import Calendar from './Calendar'; // Import the Calendar component
 
 function CalendarPage() {
-    return (
-      <div className="App">
-        <h1>Welcome!</h1>
-        <MyCalendar />
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <h1>Welcome!</h1>
+      <Calendar /> {/* Use the Calendar component */}
+    </div>
+  );
+}
 
-
-
-export default App;
+export default CalendarPage; // Export CalendarPage

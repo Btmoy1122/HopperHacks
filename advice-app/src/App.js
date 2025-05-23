@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import CalendarPage from './CalendarPage'; // Ensure this import is correct
-
+import { images } from './images';
 function App() {
   return (
     <Router>
