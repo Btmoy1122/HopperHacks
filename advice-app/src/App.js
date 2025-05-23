@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import CalendarPage from './CalendarPage'; // Ensure this import is correct
+import Journal from './Journal'; // Import the Journal component
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <li><Link to="/calendar">Calendar</Link></li>
             <li><Link to="/services">Services</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/journal">Journal</Link></li> {/* Add a link to the Journal page */}
           </ul>
         </nav>
 
@@ -26,6 +28,7 @@ function App() {
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/journal" element={<Journal />} /> {/* Add a route for the Journal page */}
         </Routes>
 
         <footer className="footer">
@@ -65,6 +68,7 @@ function Home() {
           <div className="service-card">
             <h3>ChatBot</h3>
             <p>Click on Josh the pirate doctor to talk to a virtual assistant!</p>
+            
             <button style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}>
               <img
                 src="https://files.oaiusercontent.com/file-RwrwzxMQ9pp2SyZgGTDZ87?se=2025-02-23T03%3A05%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dacbc81bc-e158-4945-8755-c58724776da6.webp&sig=kr4e7ci9jBCO9s8tq9KLMOPNOZGdUuhWf2RbX6%2BXGTM%3D"
@@ -72,10 +76,21 @@ function Home() {
                 style={{ width: '150px', height: 'auto' }}
               />
             </button>
+            
           </div>
+
           <div className="service-card">
-            <h3>SEO Optimization</h3>
-            <p>Improving your website's visibility on search engines.</p>
+            <h3>Journal</h3>
+            <p>Write down your thoughts from the day to destress!</p>
+            <Link to="/journal">
+            <button style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}>
+              <img
+                src="https://files.oaiusercontent.com/file-WXE7UzgAih1QWE5T5pX89e?se=2025-02-23T04%3A38%3A36Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D569072a3-d845-4425-982f-a3a3833cee5a.webp&sig=UdeOlbkR7KS/W6OgrTH39zwwwsgVnZzjSfwlDGBntuM%3D"
+                alt="Button Image"
+                style={{ width: '150px', height: 'auto' }}
+              />
+            </button>
+            </Link>  
           </div>
         </div>
       </section>
