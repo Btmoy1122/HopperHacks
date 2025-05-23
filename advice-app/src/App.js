@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 import CalendarPage from './CalendarPage'; // Ensure this import is correct
-import Journal from './Journal'; // Import the Journal component
 
 function App() {
   return (
@@ -10,16 +9,14 @@ function App() {
       <div className="app">
         <header className="header">
           <h1>Health Bot AI</h1>
-          <p>How may I help you?</p>
         </header>
 
         <nav className="navbar">
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/calendar">Calendar</Link></li>
-            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/chatbot">Chatbot</Link></li> 
             <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/journal">Journal</Link></li> {/* Add a link to the Journal page */}
           </ul>
         </nav>
 
@@ -28,7 +25,6 @@ function App() {
           <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/journal" element={<Journal />} /> {/* Add a route for the Journal page */}
         </Routes>
 
         <footer className="footer">
@@ -58,7 +54,7 @@ function Home() {
             <Link to="/calendar">
               <button style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}>
                 <img
-                  src="https://files.oaiusercontent.com/file-Sf1naEe5GvGC7io4ofeGen?se=2025-02-23T01%3A06%3A49Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D8c3cdbfe-7fa8-4880-bac7-b2c9307fbda0.webp&sig=wAliWxdNhSpvu4Wvw6gI9KN2eJFsNqaT/vTJfqq7ItU%3D"
+                  src={images.appointments}
                   alt="Button Image"
                   style={{ width: '150px', height: 'auto' }}
                 />
@@ -68,7 +64,6 @@ function Home() {
           <div className="service-card">
             <h3>ChatBot</h3>
             <p>Click on Josh the pirate doctor to talk to a virtual assistant!</p>
-            
             <button style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}>
               <img
                 src="https://files.oaiusercontent.com/file-RwrwzxMQ9pp2SyZgGTDZ87?se=2025-02-23T03%3A05%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dacbc81bc-e158-4945-8755-c58724776da6.webp&sig=kr4e7ci9jBCO9s8tq9KLMOPNOZGdUuhWf2RbX6%2BXGTM%3D"
@@ -76,21 +71,11 @@ function Home() {
                 style={{ width: '150px', height: 'auto' }}
               />
             </button>
-            
           </div>
 
           <div className="service-card">
-            <h3>Journal</h3>
-            <p>Write down your thoughts from the day to destress!</p>
-            <Link to="/journal">
-            <button style={{ border: 'none', background: 'none', cursor: 'pointer', padding: 0 }}>
-              <img
-                src="https://files.oaiusercontent.com/file-WXE7UzgAih1QWE5T5pX89e?se=2025-02-23T04%3A38%3A36Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D569072a3-d845-4425-982f-a3a3833cee5a.webp&sig=UdeOlbkR7KS/W6OgrTH39zwwwsgVnZzjSfwlDGBntuM%3D"
-                alt="Button Image"
-                style={{ width: '150px', height: 'auto' }}
-              />
-            </button>
-            </Link>  
+            <h3>SEO Optimization</h3>
+            <p>Improving your website's visibility on search engines.</p>
           </div>
         </div>
       </section>
@@ -102,8 +87,84 @@ function Services() {
   return <h2>Services Page</h2>;
 }
 
+
 function Contact() {
-  return <h2>Contact Page</h2>;
+  return (
+    <div className="contact-page">
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions, feedback, or need assistance, feel free to reach out to us. We're
+        here to help!
+      </p>
+
+      <div className="contact-container">
+        <div className="contact-box">
+          <img
+            src={images.person1}
+            alt="Person 1"
+            className="contact-image"
+          />
+          <div className="contact-details">
+            <h3>Brandon Moy</h3>
+            <p><strong>Email:</strong> brandon.moy@stonybrook.edu</p>
+          </div>
+        </div>
+
+        {/* Contact Box 2 */}
+        <div className="contact-box">
+          <img
+           src={images.person2}
+            alt="Person 2"
+            className="contact-image"
+          />
+          <div className="contact-details">
+            <h3>Harry Martin</h3>
+            <p><strong>Email:</strong> harrsion.martin@stonybrook.edu</p>
+          </div>
+        </div>
+
+        {/* Contact Box 3 */}
+        <div className="contact-box">
+          <img
+            src={images.person3}
+            alt="Person 3"
+            className="contact-image"
+          />
+          <div className="contact-details">
+            <h3>Charles Cheung</h3>
+            <p><strong>Email:</strong> charles.cheung.2@stonybrook.edu</p>
+          </div>
+        </div>
+      </div>
+      <h4><strong>Address:</strong> 400 Circle Rd, Stony Brook, NY 11794</h4>
+    </div>
+  );
 }
+
+
+
+
+
+/*function Contact() {
+  return (
+    <div className="contact-page">
+      <h2>Contact Us</h2>
+      <p>
+        If you have any questions, feedback, or need assistance, feel free to reach out to us. We're
+        here to help!
+      </p>
+      <div className="contact-info">
+        <h3>Our Contact Information</h3>
+        <ul>
+          <li><strong>Brandon Moy's Email:</strong> brandon.moy@stonybrook.edu</li>
+
+          <li><strong>Harry Martin's Email:</strong> harrsion.martin@stonybrook.edu</li>
+          <li><strong>Charles Cheung's Email:</strong> charles.cheung.2@stonybrook.edu</li>
+          <li><strong>Address:</strong> 400 Circle Rd, Stony Brook, NY 11794</li>
+        </ul>
+      </div>
+    </div>
+  );
+}*/
 
 export default App;

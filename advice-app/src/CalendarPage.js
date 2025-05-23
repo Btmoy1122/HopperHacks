@@ -2,14 +2,14 @@ import React from "react";
 import Calendar from "./CalendarPage";
 import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Welcome!</h1>
-      <Calendar/>
-    </div>
-  );
-}
+function CalendarPage() {
+    return (
+      <div className="App">
+        <h1>Welcome!</h1>
+        <MyCalendar />
+      </div>
+    );
+  }
 
 
 
